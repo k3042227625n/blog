@@ -1,4 +1,5 @@
 <?php
+
 // namespace Blog\Dbc;
 
 // 1.データベース接続

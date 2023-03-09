@@ -1,8 +1,11 @@
 <?php
 
 require_once('dbc.php');
-// // 取得したデータを表示
-
+// ①フォームから値を渡す
+// ②フォームから値を受け取る
+// ③バリデーションする
+// ④トランザクションを開始
+// ⑤データをDBに登録する
 $blogData = getAllBlog();
 
 ?>
@@ -17,6 +20,7 @@ $blogData = getAllBlog();
 </head>
 <body>
     <h2>ブログ一覧</h2>
+    <p><a href="/form.html">新規作成</a></p>
     <table>
         <tr>
             <td>No.</td>
