@@ -1,12 +1,14 @@
 <?php
+// ①staticを使ってみる
+// ②アクセス修飾子をつける
+// ③コンストラクタを理解する
+// ④継承を使ってみる
+require_once('blog.php');
+ini_set('display_errors', "On");
 
-require_once('dbc.php');
-// ①フォームから値を渡す
-// ②フォームから値を受け取る
-// ③バリデーションする
-// ④トランザクションを開始
-// ⑤データをDBに登録する
-$blogData = getAllBlog();
+$blog = new Blog();
+// var_dump($dbc);
+$blogData = $blog->getAll();
 
 ?>
 
@@ -31,7 +33,7 @@ $blogData = getAllBlog();
         <tr>
             <td><?php echo $column['id'] ?></td>
             <td><?php echo $column['title'] ?></td>
-            <td><?php echo setCategoryName($column['category'])?></td>
+            <td><?php echo $blog->setCategoryName($column['category'])?></td>
             <td><a href="/detail.php?id=<?php echo $column['id'] ?>">詳細</a></td>
             
         </tr>
