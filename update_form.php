@@ -41,6 +41,7 @@ $publish_status = $result['publish_status'];
         <br>
         <input type="submit" value="送信">
     </form>
+    <p><a href="/">戻る</a></p>
     <br>
     <p>HTTPとはhyper text transfer protocolの略でWebクライアントとWebサーバの通信ルール</p>
     <p>要するにリクエストとレスポンスのやり取りにおけるルールのこと</p>
